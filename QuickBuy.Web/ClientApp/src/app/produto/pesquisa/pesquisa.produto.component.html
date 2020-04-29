@@ -1,0 +1,29 @@
+<h1 class="h4 titulo mb-2">Pesquisa de Produtos</h1>
+<p *ngIf="!produtos">Carregando</p>
+
+<button class="btn btn-primary mb-2" (click)="adicionarProduto()">Adicionar</button>
+
+<table class="table table-hover" *ngIf="produtos">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Precço</th>
+      <th>Imagem</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of produtos">
+      <td>{{p.nome}}</td>
+      <td class="descricaoProduto">{{p.descricao}}</td>
+      <td class="precoProduto">R$ {{p.preco}}</td>
+      <td class="tdImagemProduto"><img src="../../../../../arquivos/{{p.nomeArquivo}}" class="imagemProduto" /></td>
+      <td><button class="btn btn-success btn-sm" (click)="editarProduto(p)">Editar</button></td>
+      <td><button class="btn btn-danger btn-sm" (click)="excluitProduto(p)">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Sintaxe de evendo -> (click)  / Nome da Sintaxe de evento -> "editarProduto"-->

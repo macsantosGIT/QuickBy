@@ -1,0 +1,21 @@
+.titulo{
+    color: #666
+}
+
+.imagemProduto{
+    width: 40%;
+    height: 10%;
+}
+
+.tdImagemProduto {
+  width: 20%;
+}
+
+
+.descricaoProduto {
+  width: 50%;
+}
+
+.precoProduto {
+  width: 10%;
+}
