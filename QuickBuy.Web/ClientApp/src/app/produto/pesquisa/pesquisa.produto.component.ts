@@ -29,10 +29,11 @@ export class PesquisaProdutoComponent implements OnInit {
   }
 
   public adicionarProduto() {
+    sessionStorage.setItem('produtoSession', "");
     this.router.navigate(['/produto']); 
   }
 
-  public excluitProduto(produto: Produto) {
+  public excluirProduto(produto: Produto) {
     var retorno = confirm("Deseja excluir o produto?")
     if (retorno == true) {
       this.produtoServico.deletar(produto).subscribe(
